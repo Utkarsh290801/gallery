@@ -110,13 +110,52 @@ const Gallery = () => {
       description:
         "Betelgeuse is a red supergiant star located in the constellation Orion, about 600 light years away from Earth. It is one of the largest stars known, with a diameter that is about 1,000 times larger than that of the sun.",
       url: "https://images.unsplash.com/photo-1544590907-d36afe5aeb96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
-      avatar: "https://mdbcdn.b-cdn.net/img/new/avatars/7.webp",
+      avatar: "https://mdbcdn.b-cdn.net/img/new/avatars/12.webp",
       likes: 21,
+    },
+    {
+      id: 12,
+      name: "Vega",
+      category: "Stars",
+      description:
+        "Betelgeuse is a red supergiant star located in the constellation Orion, about 600 light years away from Earth. It is one of the largest stars known, with a diameter that is about 1,000 times larger than that of the sun.",
+      url: "https://images.unsplash.com/photo-1559657693-e816ff3bd9af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      avatar: "https://mdbcdn.b-cdn.net/img/new/avatars/8.webp",
+      likes: 2,
+    },
+    {
+      id: 13,
+      name: "Neptune",
+      category: "Planets",
+      description:
+        "Neptune is the eighth planet from the sun and the farthest planet in the solar system. It is a gas giant, with a thick atmosphere of hydrogen, helium, and methane, and is known for its blue color.",
+      url: "https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      avatar: "https://mdbcdn.b-cdn.net/img/new/avatars/16.webp",
+      likes: 21,
+    },
+    {
+      id: 14,
+      name: "Pinwheel Galaxy",
+      category: "Galaxies",
+      description:
+        "The Pinwheel Galaxy is a spiral galaxy located about 21 million light years away from Earth. It is also known as Messier 101 or M101 and is notable for its high population of young stars and star-forming regions.",
+      url: "https://images.unsplash.com/photo-1555226196-f9930c35a7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=868&q=80",
+      avatar: "https://mdbcdn.b-cdn.net/img/new/avatars/17.webp",
+      likes: 121,
+    },
+    {
+      id: 15,
+      name: "Antares",
+      category: "Stars",
+      description:
+        "Antares is a red supergiant star located in the constellation Scorpius, about 600 light years away from Earth. It is one of the brightest stars in the night sky and is easily visible to the naked eye.",
+      url: "https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=850&q=80",
+      avatar: "https://mdbcdn.b-cdn.net/img/new/avatars/17.webp",
+      likes: 11,
     },
   ]);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
 
   useEffect(() => {
     const results = cards.filter(
@@ -133,8 +172,10 @@ const Gallery = () => {
   return (
     <div className="container mx-auto">
       <Search handleInputChange={handleInputChange} />
-      {searchResults.length === 0  ? (
-        <h1 className="text-6xl text-center mx-auto mt-32">No Result Found....</h1>
+      {searchResults.length === 0 ? (
+        <h1 className="text-6xl text-center mx-auto mt-32">
+          No Result Found....
+        </h1>
       ) : (
         <div class="container mx-auto px-5 py-24 lg:px-32 lg:pt-12">
           <div class="-m-1 flex flex-wrap md:-m-2">
